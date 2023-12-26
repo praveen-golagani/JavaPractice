@@ -3,16 +3,6 @@ package original;
 import java.util.Scanner;
 
 public class ReverseString {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ReverseString rs = new ReverseString();
-        System.out.println("Enter word/sentence : ");
-        String input = sc.nextLine();
-        System.out.println("Reverse : " + rev(input));
-        System.out.println("Reverse using Builder : " + rs.revBuilder(input));
-        System.out.println("Reverse using Buffer : " + rs.revBuff(input));
-        sc.close();
-    }
 
     public static String rev(String inp) {
         String rev = "";
@@ -30,5 +20,17 @@ public class ReverseString {
     public String revBuff(String inp) {
         StringBuffer sbuf = new StringBuffer(inp);
         return sbuf.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ReverseString rs = new ReverseString();
+        System.out.println("Enter word/sentence : ");
+        String input = sc.nextLine();
+        System.out.println("Reverse : " + rev(input));
+        System.out.println("Reverse using Builder : " + rs.revBuilder(input));
+        System.out.println("Reverse using Buffer : " + rs.revBuff(input));
+        sc.close();
     }
 }
