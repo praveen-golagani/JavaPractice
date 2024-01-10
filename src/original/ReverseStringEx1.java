@@ -3,8 +3,8 @@ package original;
 import java.util.Scanner;
 
 public class ReverseStringEx1 {
-
-    public static String rev(String inp) {
+	// Reversed String without position change
+    public static String usingNestedFor(String inp) {
         String rev = "";
         String[] inp_str = inp.split(" ");
         for (int i = 0; i < inp_str.length; i++) {
@@ -16,7 +16,7 @@ public class ReverseStringEx1 {
         return rev.trim();
     }
 
-    public String revBld(String inp) {
+    public String usingBuilder(String inp) {
         String reverse = "";
         String inp_arr[] = inp.split(" ");
         for (int i = 0; i < inp_arr.length; i++) {
@@ -32,8 +32,8 @@ public class ReverseStringEx1 {
         ReverseStringEx1 rsx = new ReverseStringEx1();
         System.out.println("Enter a sentence:");
         String input = sc.nextLine();
-        System.out.println("Reversed String without position change : " + rev(input));
-        System.out.println("used builder : " + rsx.revBld(input));
+        System.out.println("Reversed String without position change : " + usingNestedFor(input));
+        System.out.println("used builder : " + rsx.usingBuilder(input));
         sc.close();
     }
 
