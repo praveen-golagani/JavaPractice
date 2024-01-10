@@ -17,10 +17,19 @@ public class ReverseString {
         return sbld.reverse().toString();
     }
 
-    public String usingBuffer(String inp) {
+    public void usingBuffer(String inp) {
         StringBuffer sbuf = new StringBuffer(inp);
-        return sbuf.reverse().toString();
+        System.out.println("Reverse using Buffer : " + sbuf.reverse().toString());
     }
+    
+    public static void usingArray(String word) {
+		String reverse = "";
+		char[] wordArray = word.toCharArray();
+		for(int i = wordArray.length-1;i>=0;i--) {
+		reverse += wordArray[i];
+		}
+		System.out.println("Reverse using Array : "+reverse);
+	}
 
     public static void main(String[] args) {
 
@@ -29,8 +38,9 @@ public class ReverseString {
         System.out.println("Enter word/sentence : ");
         String input = sc.nextLine();
         System.out.println("Reverse : " + usingLoop(input));
+        usingArray(input);
         System.out.println("Reverse using Builder : " + rs.usingBuilder(input));
-        System.out.println("Reverse using Buffer : " + rs.usingBuffer(input));
+        rs.usingBuffer(input);
         sc.close();
     }
 }
