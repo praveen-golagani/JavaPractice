@@ -24,7 +24,7 @@ public class ReverseStringEx2 {
                 if (result[j] == ' ') {
                     j--;
                 }
-                result[j] = inputArray[i];
+                result[j] = inputArray[i];	
                 j--;
             }
         }
