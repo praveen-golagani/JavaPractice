@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ReverseString {
 
-	 String rev = "";
+	String rev = "";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,12 +23,12 @@ public class ReverseString {
 		}
 		System.out.println(rev);
 	}
-	
+
 	public void usingArray(String word) {
 		String reverse = "";
 		char[] wordArray = word.toCharArray();
-		for(int i = wordArray.length-1;i>=0;i--) {
-		reverse += wordArray[i];
+		for (int i = wordArray.length - 1; i >= 0; i--) {
+			reverse += wordArray[i];
 		}
 		System.out.println(reverse);
 	}
