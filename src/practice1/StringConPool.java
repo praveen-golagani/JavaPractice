@@ -8,6 +8,11 @@ public class StringConPool {
 		String s1 = "Praveen";
 		String s2 = new String("Praveen");
 		System.out.println(s1==s2);
+		
+		int x = 10;
+		 int y = 5;
+		 int z = (x > y) ? x : y;
+		 System.out.println(z);
 	}
 
 }

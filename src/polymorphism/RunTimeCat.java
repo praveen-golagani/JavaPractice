@@ -1,4 +1,4 @@
-package oops_concepts;
+package polymorphism;
 
 public class RunTimeCat extends RunTimeAnimal {
 
